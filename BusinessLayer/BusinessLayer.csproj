@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B83A493A-345B-4BBA-BE4F-4858CDF4D381}</ProjectGuid>
+    <ProjectGuid>{37B0C2C3-FCD0-4FB8-BBD3-E678D6706D45}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DataAccessLayer</RootNamespace>
-    <AssemblyName>DataAccessLayer</AssemblyName>
+    <RootNamespace>BusinessLayer</RootNamespace>
+    <AssemblyName>BusinessLayer</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -51,39 +51,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract\IAboutDal.cs" />
-    <Compile Include="Abstract\IAdminDal.cs" />
-    <Compile Include="Abstract\ICertificaDal.cs" />
-    <Compile Include="Abstract\IComminicationDal.cs" />
-    <Compile Include="Abstract\IEducationDal.cs" />
-    <Compile Include="Abstract\IExperienceDal.cs" />
-    <Compile Include="Abstract\IHobbyDal.cs" />
-    <Compile Include="Abstract\IRepository.cs" />
-    <Compile Include="Abstract\ISkillsDal.cs" />
-    <Compile Include="Concrete\Context.cs" />
-    <Compile Include="Concrete\Repositories\GenericRepository.cs" />
-    <Compile Include="EntityFramework\EfAboutDal.cs" />
-    <Compile Include="EntityFramework\EfAdminDal.cs" />
-    <Compile Include="EntityFramework\EfCertificaDal.cs" />
-    <Compile Include="EntityFramework\EfComminicationDal.cs" />
-    <Compile Include="EntityFramework\EfEducationDal.cs" />
-    <Compile Include="EntityFramework\EfExperiencesDal.cs" />
-    <Compile Include="EntityFramework\EfHobbyDal.cs" />
-    <Compile Include="EntityFramework\EfSkillsDal.cs" />
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Abstract\IAboutService.cs" />
+    <Compile Include="Abstract\IEducationService.cs" />
+    <Compile Include="Abstract\IExperiencesService.cs" />
+    <Compile Include="Concrete\AboutManager.cs" />
+    <Compile Include="Concrete\EducationManager.cs" />
+    <Compile Include="Concrete\ExperiencesManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{B83A493A-345B-4BBA-BE4F-4858CDF4D381}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EntityLayer\EntityLayer.csproj">
-      <Project>{ED889C36-C1E2-4C56-A82F-81B6FB2BCEFD}</Project>
+      <Project>{ed889c36-c1e2-4c56-a82f-81b6fb2bcefd}</Project>
       <Name>EntityLayer</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -1,4 +1,9 @@
-﻿using System;
+﻿using BusinessLayer.Concrete;
+using DataAccessLayer.Abstract;
+using DataAccessLayer.Concrete.Repositories;
+using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +13,29 @@ namespace Cv.Controllers
 {
     public class VitrinPanelController : Controller
     {
-        // GET: VitrinPanel
-        public ActionResult Index()
+        AboutManager AboutManager = new AboutManager(new EfAboutDal() );
+
+        ExperiencesManager ExperienceManager = new ExperiencesManager(new EfExperiencesDal() );
+
+        EducationManager educationManager = new EducationManager(new EfEducationDal() );
+        public ActionResult Index()      //About
         {
-            return View();
+            var values = AboutManager.GetList();
+            return View(values);
         }
+
+        public PartialViewResult Experiences()    //Projelerimi listeler.
+        {
+            var values = ExperienceManager.GetList();
+            return PartialView(values);
+        }
+
+        public PartialViewResult Educations()
+        {
+            var educationValues = educationManager.GetList();
+            return PartialView(educationValues);
+        }
+      
+
     }
 }
