@@ -1,0 +1,14 @@
+﻿@using EntityLayer.Concrete
+@model List<Hobby>
+
+
+
+<div class="resume-section-content">
+    <h2 class="mb-5">Hobiler</h2>
+    @foreach (var item in Model)
+    {
+        <p class="mb-0"><i class="fas fa-check"></i> @item.Description1</p>
+        <p class="mb-0"><i class="fas fa-check"></i> @item.Description2</p>
+    }
+
+</div>

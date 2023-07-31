@@ -18,6 +18,10 @@ namespace Cv.Controllers
         ExperiencesManager ExperienceManager = new ExperiencesManager(new EfExperiencesDal() );
 
         EducationManager educationManager = new EducationManager(new EfEducationDal() );
+
+        SkillManager skillManager = new SkillManager(new EfSkillsDal() );
+
+        HobbyManager hobbyManager = new HobbyManager(new EfHobbyDal() );
         public ActionResult Index()      //About
         {
             var values = AboutManager.GetList();
@@ -34,6 +38,18 @@ namespace Cv.Controllers
         {
             var educationValues = educationManager.GetList();
             return PartialView(educationValues);
+        }
+
+        public PartialViewResult Skills()
+        {
+            var skillsValues = skillManager.GetSkills();
+            return PartialView(skillsValues);
+        }
+
+        public PartialViewResult Hobby()
+        {
+            var hobbyValues = hobbyManager.GetList();
+            return PartialView(hobbyValues);
         }
       
 

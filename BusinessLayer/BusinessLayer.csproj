@@ -54,9 +54,13 @@
     <Compile Include="Abstract\IAboutService.cs" />
     <Compile Include="Abstract\IEducationService.cs" />
     <Compile Include="Abstract\IExperiencesService.cs" />
+    <Compile Include="Abstract\IHobbyService.cs" />
+    <Compile Include="Abstract\ISkillsService.cs" />
     <Compile Include="Concrete\AboutManager.cs" />
     <Compile Include="Concrete\EducationManager.cs" />
     <Compile Include="Concrete\ExperiencesManager.cs" />
+    <Compile Include="Concrete\HobbyManager.cs" />
+    <Compile Include="Concrete\SkillManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

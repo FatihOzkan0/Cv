@@ -194,6 +194,8 @@
     <Content Include="Views\VitrinPanel\Index.cshtml" />
     <Content Include="Views\VitrinPanel\Experiences.cshtml" />
     <Content Include="Views\VitrinPanel\Educations.cshtml" />
+    <Content Include="Views\VitrinPanel\Skills.cshtml" />
+    <Content Include="Views\VitrinPanel\Hobby.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
