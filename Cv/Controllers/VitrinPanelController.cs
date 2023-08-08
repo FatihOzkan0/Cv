@@ -22,6 +22,12 @@ namespace Cv.Controllers
         SkillManager skillManager = new SkillManager(new EfSkillsDal() );
 
         HobbyManager hobbyManager = new HobbyManager(new EfHobbyDal() );
+
+        CertificaManager certificaManager = new CertificaManager(new EfCertificaDal() );
+
+        CommunicationManager communicationManager = new CommunicationManager(new EfComminicationDal() );
+
+
         public ActionResult Index()      //About
         {
             var values = AboutManager.GetList();
@@ -51,7 +57,27 @@ namespace Cv.Controllers
             var hobbyValues = hobbyManager.GetList();
             return PartialView(hobbyValues);
         }
-      
+
+        public PartialViewResult Certifica()
+        {
+            var certificaValues = certificaManager.GetList();
+            return PartialView(certificaValues);
+        }
+
+        [HttpGet]
+        public PartialViewResult Contact()
+        {
+            return PartialView();
+        }
+
+        [HttpPost]
+        public PartialViewResult Contact(Communication c)
+        {
+            c.Date = DateTime.Now;
+            communicationManager.CommunucationAdd(c);
+            return PartialView();
+        }
+
 
     }
 }

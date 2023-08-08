@@ -36,7 +36,7 @@ namespace DataAccessLayer.Concrete.Repositories
             return _object.ToList();
         }
 
-        public T Get(Expression<Func<T, bool>> filter)
+        public T Get(Expression<Func<T, bool>> filter)          //Bu method ile ID ye göre işlem yapıyoruz
         {
             return _object.SingleOrDefault(filter);
         }

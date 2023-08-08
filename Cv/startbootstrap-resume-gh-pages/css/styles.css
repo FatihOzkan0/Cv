@@ -584,6 +584,8 @@ pre code {
   margin-left: -0.75rem;
 }
 
+
+
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
@@ -10114,4 +10116,6 @@ section.resume-section .resume-section-content {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
+
+
 }

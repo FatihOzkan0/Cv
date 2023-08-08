@@ -1,0 +1,21 @@
+﻿@model EntityLayer.Concrete.Certifica
+
+@{
+    ViewBag.Title = "CertificaEdit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("CertificaEdit", "Certifica", FormMethod.Post))
+{
+    <div class="form-group">
+        <br />
+        @Html.Label("OKUL", new { @style = "margin-left: 20px;" })
+        @Html.TextBoxFor(x => x.CertificaName, new { @class = "form-control", @style = "margin-left: 20px;" })
+        <br />
+     
+
+    </div>
+
+    <button class="btn btn-info">Güncelle</button>
+}
+

@@ -10,9 +10,11 @@ namespace BusinessLayer.Abstract
     public interface IExperiencesService
     {
         List<Experience> GetList();
-        void AboutAdd(Experience experience);
+        void ExperiencesAdd(Experience experience);
         Experience GetByID(int id);
-        void AboutDelete(Experience experience);
-        void AboutUpdate(Experience experience);
+        void ExperiencesDelete(Experience experience);
+        void ExperiencesUpdate(Experience experience);
+
+        
     }
 }

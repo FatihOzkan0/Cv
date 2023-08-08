@@ -18,24 +18,24 @@ namespace BusinessLayer.Concrete
             _experienceDal = experienceDal;
         }
 
-        public void AboutAdd(Experience experience)
+        public void ExperiencesAdd(Experience experience)
         {
-            throw new NotImplementedException();
+            _experienceDal.Insert(experience);
         }
 
-        public void AboutDelete(Experience experience)
+        public void ExperiencesDelete(Experience experience)
         {
-            throw new NotImplementedException();
+            _experienceDal.Delete(experience);
         }
 
-        public void AboutUpdate(Experience experience)
+        public void ExperiencesUpdate(Experience experience)
         {
-            throw new NotImplementedException();
+            _experienceDal.Update(experience);
         }
 
-        public Experience GetByID(int id)
+        public Experience GetByID(int id)        //Bu method ile ID tutuyoruz ve ona göre o İD de işlem gerçekleştiriyoruz.
         {
-            throw new NotImplementedException();
+            return _experienceDal.Get(x => x.ID == id);
         }
 
         public List<Experience> GetList()

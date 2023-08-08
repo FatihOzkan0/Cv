@@ -1,0 +1,33 @@
+﻿@using EntityLayer.Concrete
+@model List<Certifica>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>SERTİFİKA</th>
+       
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.CertificaName</td>
+            
+
+            <td><a href="/Certifica/CertificaDelete/@item.ID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Certifica/CertificaEdit/@item.ID" class="btn btn-success">Düzenle</a></td>
+        </tr>
+    }
+
+
+</table>
+
+<br />
+<a href="/Certifica/CertificaAdd" class="btn btn-primary">Sertifika Ekle</a>

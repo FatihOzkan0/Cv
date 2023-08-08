@@ -1,0 +1,25 @@
+﻿@model EntityLayer.Concrete.Skills
+
+@{
+    ViewBag.Title = "SkillEdit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("SkillEdit", "Skill", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label(" ID")
+        @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+        <br />
+        @Html.Label("Yetenek ")
+        @Html.TextBoxFor(x => x.SkillsName, new { @class = "form-control" })
+        <br />
+       
+      
+
+
+    </div>
+
+    <button class="btn btn-info">Güncelle</button>
+}
+

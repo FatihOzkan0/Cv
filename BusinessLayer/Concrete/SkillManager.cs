@@ -20,7 +20,7 @@ namespace BusinessLayer.Concrete
         
         public Skills GetById(int id)
         {
-            throw new NotImplementedException();
+           return _skillsDal.Get(x=>x.ID==id);
         }
 
         public List<Skills> GetSkills()
@@ -30,17 +30,17 @@ namespace BusinessLayer.Concrete
 
         public void SkillsAdd(Skills skill)
         {
-            throw new NotImplementedException();
+            _skillsDal.Insert(skill);
         }
 
         public void SkillsDelete(Skills skill)
         {
-            throw new NotImplementedException();
+            _skillsDal.Delete(skill);
         }
 
         public void SkillsUpdate(Skills skill)
         {
-            throw new NotImplementedException();
+            _skillsDal.Update(skill);
         }
     }
 }

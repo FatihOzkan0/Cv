@@ -1,0 +1,31 @@
+﻿@model EntityLayer.Concrete.Experience 
+@{
+    ViewBag.Title = "ExperiencesAdd";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+@using (Html.BeginForm("ExperiencesAdd", "Experiences", FormMethod.Post))
+{
+    <div class="form-group">
+        <br/>
+        @Html.Label("  BAŞLIK ")
+        @Html.TextBoxFor(x => x.Heading, new { @class = "form-control" , @style = "margin-left: 20px;" })
+
+        <br />
+        @Html.Label("  ALT BAŞLIK")
+        @Html.TextBoxFor(x => x.SubHead, new { @class = "form-control ", @style = "margin-left: 20px;" })
+        <br />
+        @Html.Label("  AÇIKLAMA ")
+        @Html.TextAreaFor(x => x.Description, new { @class = "form-control", @style = "margin-left: 20px;" })
+        <br />
+        @Html.Label("  TARİH ")
+        @Html.TextBoxFor(x => x.Date, new { @class = "form-control", @style = "margin-left: 20px; " })
+        <br />
+
+        <br/>
+        <button class="btn btn-info">Proje Ekle</button>
+    </div>
+}
+

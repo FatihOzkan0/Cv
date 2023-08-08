@@ -1,0 +1,22 @@
+﻿@model EntityLayer.Concrete.Hobby
+
+
+@{
+    ViewBag.Title = "HobbyAdd";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("HobbyAdd", "Hobby", FormMethod.Post))
+{
+    <div class="form-group">
+        <br />
+        @Html.Label("HOBBY-1" , new { @style = "margin-left: 20px;" })
+        @Html.TextBoxFor(x => x.Description1, new { @class = "form-control", @style = "margin-left: 20px;" })
+        <br />
+        @Html.Label("HOBBY-2", new { @style = "margin-left: 20px;" })
+        @Html.TextBoxFor(x => x.Description2, new { @class = "form-control", @style = "margin-left: 20px;" })
+        <br/>
+        <button class="btn btn-info" style="margin-left: 20px;" >Ekle</button>
+    </div>
+}
+

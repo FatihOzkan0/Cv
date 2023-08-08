@@ -1,0 +1,34 @@
+﻿@model EntityLayer.Concrete.Education
+
+
+@{
+    ViewBag.Title = "EducationEdit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("EducationEdit", "Education", FormMethod.Post))
+{
+    <div class="form-group">
+        <br />
+        @Html.Label("OKUL", new { @style = "margin-left: 20px;" })
+        @Html.TextBoxFor(x => x.Heading, new { @class = "form-control", @style = "margin-left: 20px;" })
+        <br />
+        @Html.Label("FAKÜLTE", new { @style = "margin-left: 20px;" })
+        @Html.TextBoxFor(x => x.SubHead1, new { @class = "form-control", @style = "margin-left: 20px;" })
+        <br />
+        @Html.Label("BÖLÜM", new { @style = "margin-left: 20px;" })
+        @Html.TextBoxFor(x => x.SubHead2, new { @class = "form-control", @style = "margin-left: 20px;" })
+        <br />
+        @Html.Label("ORTALAMA", new { @style = "margin-left: 20px;" })
+        @Html.TextBoxFor(x => x.Average, new { @class = "form-control", @style = "margin-left: 20px;" })
+        <br />
+        @Html.Label("TARİH", new { @style = "margin-left: 20px;" })
+        @Html.TextBoxFor(x => x.Date, new { @class = "form-control", @style = "margin-left: 20px;" })
+        <br />
+
+    </div>
+
+    <button class="btn btn-info">Güncelle</button>
+}
+
+

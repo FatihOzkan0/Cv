@@ -19,22 +19,22 @@ namespace BusinessLayer.Concrete
         }
         public void EducationAdd(Education education)
         {
-            throw new NotImplementedException();
+           _educationDal.Insert(education);
         }
 
         public void EducationDelete(Education education)
         {
-            throw new NotImplementedException();
+            _educationDal.Delete(education);
         }
 
         public void EducationUpdaate(Education education)
         {
-            throw new NotImplementedException();
+            _educationDal.Update(education);
         }
 
         public Education GetById(int id)
         {
-            throw new NotImplementedException();
+          return _educationDal.Get(x=>x.ID==id);
         }
 
         public List<Education> GetList()

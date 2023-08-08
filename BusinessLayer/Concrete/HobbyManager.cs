@@ -20,7 +20,7 @@ namespace BusinessLayer.Concrete
         }
         public Hobby GetID(int id)
         {
-            throw new NotImplementedException();
+            return _hobbydal.Get(x=>x.ID==id);
         }
 
         public List<Hobby> GetList()
@@ -30,17 +30,17 @@ namespace BusinessLayer.Concrete
 
         public void HobbyAdd(Hobby hobby)
         {
-            throw new NotImplementedException();
+             _hobbydal.Insert(hobby);
         }
 
         public void HobbyDelete(Hobby hobby)
         {
-            throw new NotImplementedException();
+            _hobbydal.Delete(hobby);
         }
 
         public void HobbyUpdate(Hobby hobby)
         {
-            throw new NotImplementedException();
+           _hobbydal.Update(hobby);
         }
     }
 }

@@ -1,0 +1,33 @@
+﻿@using EntityLayer.Concrete
+@model List<Hobby>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>HOBBY-1</th>
+        <th>HOBBY-2</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.Description1</td>
+            <td>@item.Description2</td>
+
+            <td><a href="/Hobby/HobbyDelete/@item.ID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Hobby/HobbyEdit/@item.ID" class="btn btn-success">Düzenle</a></td>
+        </tr>
+    }
+    <br/>
+
+</table>
+
+<br />
+<a href="/Hobby/HobbyAdd" class="btn btn-primary">Hobby Ekle</a>
+
