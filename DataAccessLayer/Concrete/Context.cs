@@ -19,6 +19,7 @@ namespace DataAccessLayer.Concrete
         public DbSet<Experience> Experiences { get; set; }
         public DbSet<Hobby> Hobbys { get; set;}
         public DbSet<Skills> Skills { get; set; }
+        public DbSet<SocialMedia> SocialMedia { get; set; }
 
 
     }

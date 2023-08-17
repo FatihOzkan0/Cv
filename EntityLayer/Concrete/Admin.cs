@@ -10,7 +10,7 @@ namespace EntityLayer.Concrete
     public class Admin
     {
         [Key]
-        public string ID { get; set; }
+        public int ID { get; set; }
         [StringLength(50)]
         public string UserName { get; set; }
         [StringLength(50)]

@@ -40,7 +40,7 @@ namespace BusinessLayer.Concrete
 
         public List<Communication> GetList()
         {
-            throw new NotImplementedException();
+            return _comminicationDal.List();
         }
     }
 }

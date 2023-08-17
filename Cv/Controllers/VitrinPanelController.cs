@@ -11,6 +11,7 @@ using System.Web.Mvc;
 
 namespace Cv.Controllers
 {
+    [AllowAnonymous]
     public class VitrinPanelController : Controller
     {
         AboutManager AboutManager = new AboutManager(new EfAboutDal() );
@@ -27,11 +28,19 @@ namespace Cv.Controllers
 
         CommunicationManager communicationManager = new CommunicationManager(new EfComminicationDal() );
 
+        SocialMediaManager socialMedia = new SocialMediaManager(new EfSocialMediaDal() );
+
 
         public ActionResult Index()      //About
         {
             var values = AboutManager.GetList();
             return View(values);
+        }
+
+        public PartialViewResult SocialMedia()
+        {
+            var values = socialMedia.GetList();
+            return PartialView(values);
         }
 
         public PartialViewResult Experiences()    //Projelerimi listeler.

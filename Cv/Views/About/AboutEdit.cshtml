@@ -1,0 +1,39 @@
+﻿@model EntityLayer.Concrete.About
+
+@{
+    ViewBag.Title = "AboutEdit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("AboutEdit", "About", FormMethod.Post))
+{
+    <div class="form-group">
+        <br />
+        @Html.Label("Ad", new { @style = "margin-left: 20px;" })
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control", @style = "margin-left: 20px;" })
+        <br />
+        @Html.Label("Soyad", new { @style = "margin-left: 20px;" })
+        @Html.TextBoxFor(x => x.Surname, new { @class = "form-control", @style = "margin-left: 20px;" })
+        <br />
+        @Html.Label("Adres", new { @style = "margin-left: 20px;" })
+        @Html.TextBoxFor(x => x.Address, new { @class = "form-control", @style = "margin-left: 20px;" })
+        <br />
+        @Html.Label("Telefon", new { @style = "margin-left: 20px;" })
+        @Html.TextBoxFor(x => x.Phone, new { @class = "form-control", @style = "margin-left: 20px;" })
+        <br />
+        @Html.Label("Mail", new { @style = "margin-left: 20px;" })
+        @Html.TextBoxFor(x => x.Mail, new { @class = "form-control", @style = "margin-left: 20px;" })
+        <br />
+        @Html.Label("Açıklama", new { @style = "margin-left: 20px;" })
+        @Html.TextAreaFor(x => x.Description, new { @class = "form-control", @style = "margin-left: 20px; width: 400px;     height: 200px" })
+        <br />
+        @Html.Label("Resim", new { @style = "margin-left: 20px;" })
+        @Html.TextBoxFor(x => x.Image, new { @class = "form-control", @style = "margin-left: 20px;" })
+        <br />
+
+    </div>
+
+    <button class="btn btn-info">Güncelle</button>
+}
+
+

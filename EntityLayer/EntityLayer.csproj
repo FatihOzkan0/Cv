@@ -59,6 +59,7 @@
     <Compile Include="Concrete\Hobby.cs" />
     <Compile Include="Concrete\Admin.cs" />
     <Compile Include="Concrete\Skills.cs" />
+    <Compile Include="Concrete\SocialMedia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

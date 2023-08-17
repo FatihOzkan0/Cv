@@ -60,6 +60,7 @@
     <Compile Include="Abstract\IHobbyDal.cs" />
     <Compile Include="Abstract\IRepository.cs" />
     <Compile Include="Abstract\ISkillsDal.cs" />
+    <Compile Include="Abstract\ISocialMeadiaDal.cs" />
     <Compile Include="Concrete\Context.cs" />
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
     <Compile Include="EntityFramework\EfAboutDal.cs" />
@@ -70,6 +71,19 @@
     <Compile Include="EntityFramework\EfExperiencesDal.cs" />
     <Compile Include="EntityFramework\EfHobbyDal.cs" />
     <Compile Include="EntityFramework\EfSkillsDal.cs" />
+    <Compile Include="EntityFramework\EfSocialMediaDal.cs" />
+    <Compile Include="Migrations\202308090728404_socialMedia.cs" />
+    <Compile Include="Migrations\202308090728404_socialMedia.designer.cs">
+      <DependentUpon>202308090728404_socialMedia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308090747331_mg_ıcon.cs" />
+    <Compile Include="Migrations\202308090747331_mg_ıcon.designer.cs">
+      <DependentUpon>202308090747331_mg_ıcon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308091156104_mig_Admin.cs" />
+    <Compile Include="Migrations\202308091156104_mig_Admin.designer.cs">
+      <DependentUpon>202308091156104_mig_Admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -83,7 +97,17 @@
       <Name>EntityLayer</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202308090728404_socialMedia.resx">
+      <DependentUpon>202308090728404_socialMedia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308090747331_mg_ıcon.resx">
+      <DependentUpon>202308090747331_mg_ıcon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308091156104_mig_Admin.resx">
+      <DependentUpon>202308091156104_mig_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

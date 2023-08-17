@@ -14,7 +14,7 @@
                 <div class="subheading mb-3">@item.SubHead</div>
                 <p>@item.Description</p>
             </div>
-            <div class="flex-shrink-0"><span class="text-primary">@item.Date</span></div>
+            <div class="flex-shrink-0"><span class="text-primary">@(((DateTime)item.Date).ToString("dd-MMM-yyyy"))</span></div>
         </div>
        
     }

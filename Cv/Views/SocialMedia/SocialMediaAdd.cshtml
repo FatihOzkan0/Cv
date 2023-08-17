@@ -1,0 +1,26 @@
+﻿@model EntityLayer.Concrete.SocialMedia
+
+
+@{
+    ViewBag.Title = "SocialMediaAdd";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("SocialMediaAdd", "SocialMedia", FormMethod.Post))
+{
+    <div class="form-group">
+        <br />
+        @Html.Label("Platform", new { @style = "margin-left: 20px;" })
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control", @style = "margin-left: 20px;" })
+        <br />
+        @Html.Label("Link", new { @style = "margin-left: 20px;" })
+        @Html.TextBoxFor(x => x.Link, new { @class = "form-control", @style = "margin-left: 20px;" })
+        <br />
+        @Html.Label("Icon", new { @style = "margin-left: 20px;" })
+        @Html.TextBoxFor(x => x.Icon, new { @class = "form-control", @style = "margin-left: 20px;" })
+        <br />
+       
+        <button class="btn btn-info" style="margin-left: 20px;">Ekle</button>
+    </div>
+}
+
