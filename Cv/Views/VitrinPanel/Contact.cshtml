@@ -1,31 +1,29 @@
 ﻿@model EntityLayer.Concrete.Communication
 
 
+<div style="border: 2px solid #ffffff; padding: 20px; width: 90%; margin: 0 auto; ">
+    <h2 style="color: #bd5d38; text-align: center;">İletişim Sayfası</h2>
+    @using (Html.BeginForm("Index", "VitrinPanel", FormMethod.Post))
+    {
+        <div class="form-group">
+            <br />
 
+            @Html.Label("Ad-Soyad")
+            @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+            <br />
+            @Html.Label("Mail")
+            @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+            <br />
+            @Html.Label("Konu")
+            @Html.TextBoxFor(x => x.Subject, new { @class = "form-control" })
+            <br />
+            @Html.Label("Mesaj")
+            @Html.TextAreaFor(x => x.Message, new { @class = "form-control" })
+            <br />
 
+            <button class="btn btn-info">Gönder</button>
+        </div>
+    }
+</div>
 
-@using (Html.BeginForm("Index", "VitrinPanel", FormMethod.Post))
-{
-    <div class="form-group">
-        <h2 style="color: #bd5d38">İletişim Sayfası</h2>
-        <br/>
-
-        @Html.Label("Ad-Soyad")
-        @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
-        <br />
-        @Html.Label("Mail")
-        @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
-        <br />
-        @Html.Label("Konu")
-        @Html.TextBoxFor(x => x.Subject, new { @class = "form-control" })
-        <br />
-        @Html.Label("Mesaj")
-        @Html.TextBoxFor(x => x.Message, new { @class = "form-control" })
-        <br />
-
-
-
-        <button class="btn btn-info">Gönder</button>
-    </div>
-}
 
